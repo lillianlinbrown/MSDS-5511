@@ -14578,7 +14578,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="1-Introduction">1 Introduction<a class="anchor-link" href="#1-Introduction">&#182;</a></h1><p>This project is based on the criteria from a Kaggle Natural Language Processing Competition:</p>
 <p><a href="https://www.kaggle.com/c/nlp-getting-started/overview">https://www.kaggle.com/c/nlp-getting-started/overview</a></p>
 <h2 id="1.1-Problem-Description">1.1 Problem Description<a class="anchor-link" href="#1.1-Problem-Description">&#182;</a></h2><p>The objective of this project is to develop a model that can predict whether a given tweet is about a real disaster or not. Tweets serve as a vital communication tool during disasters, but they can also contain misinformation or non-disaster-related content. The goal is to accurately classify tweets as disaster-related (label 1) or not disaster-related (label 0).</p>
@@ -14614,7 +14615,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">product</span>
@@ -14664,7 +14665,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load the training, test, and sample submission data</span>
@@ -14678,20 +14679,20 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="c1"># Description of the dataset</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;TRAIN OVERVIEW&#39;</span><span class="p">,</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">SHAPE OF TRAIN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span>
-      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">COLUMNS IN TRAIN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> 
+      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">COLUMNS IN TRAIN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">DATA TYPES OF COLUMNS IN TRAIN:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="o">.</span><span class="n">dtypes</span><span class="p">,</span>
-      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE ID VALUES: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>       
+      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE ID VALUES: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">NUMBER OF NA VALUES IN ID COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
-      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE KEYWORDS IN KEYWORD COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;keyword&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>     
+      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE KEYWORDS IN KEYWORD COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;keyword&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">NUMBER OF NA VALUES IN KEYWORD COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;keyword&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE LOCATIONS IN LOCATION COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">NUMBER OF NA VALUES IN LOCATION COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
-      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE WORDS IN TEXT COLUMN: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">split</span><span class="p">())),</span>       
+      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE WORDS IN TEXT COLUMN: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">split</span><span class="p">())),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">NUMBER OF NA VALUES IN TEXT COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">MINIMUM UNIQUE WORDS IN TEXT COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">())))</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">MEAN UNIQUE WORDS IN TEXT COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">())))</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">MAXIMUM UNIQUE WORDS IN TEXT COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">())))</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
-      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE TARGET VALUES: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>       
+      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE TARGET VALUES: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">NUMBER OF NA VALUES IN TARGET COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">HEAD OF TRAIN: </span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="o">.</span><span class="n">head</span><span class="p">(),</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
@@ -14705,9 +14706,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>TRAIN OVERVIEW 
@@ -14780,7 +14786,8 @@ HEAD OF TRAIN:
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="1.3-Data-Cleaning">1.3 Data Cleaning<a class="anchor-link" href="#1.3-Data-Cleaning">&#182;</a></h2><p>The data cleaning process was pivotal in preparing the dataset for analysis and modeling. Given that the 'text' column is useful for helping to find the missing values of 'keyword' and 'location', the cleaning process began with text.</p>
 <h3 id="Text">Text<a class="anchor-link" href="#Text">&#182;</a></h3><p>The text column underwent several cleaning steps to enhance readability and analysis. Initially containing a diverse range of natural language, the cleaned version reduced the total unique words from 31,924 to 11,971. This reduction helps streamline natural language processing tasks by focusing on the most relevant terms and eliminating noise. Notably, the mean unique words per entry decreased from approximately 14.34 to 8.69, with the maximum unique words per entry reduced from 29 to 21. This normalization enhances the dataset’s consistency and prepares it for efficient keyword extraction and text-based analysis.</p>
 <h3 id="Keyword">Keyword<a class="anchor-link" href="#Keyword">&#182;</a></h3><p>In the keyword column, the dataset originally included 221 unique keywords, which decreased to 167 after cleaning. Notably, 61 entries originally lacked keywords and 40 of those were successfully categorized into existing categories while the other 21 were labelled as 'other'. This standardization ensures uniformity across entries, facilitating more accurate classification and analysis based on specific disaster-related keywords.</p>
@@ -14795,7 +14802,7 @@ HEAD OF TRAIN:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">run</span> ./NPL_Disaster_Tweets_clean_lists.ipynb
@@ -14811,7 +14818,7 @@ HEAD OF TRAIN:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gc</span> <span class="o">=</span> <span class="n">geonamescache</span><span class="o">.</span><span class="n">GeonamesCache</span><span class="p">()</span>
@@ -14871,89 +14878,89 @@ HEAD OF TRAIN:
 <span class="k">def</span> <span class="nf">clean_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="c1"># Convert to lowercase</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-    
+
     <span class="c1"># Expand contractions</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">contractions</span><span class="o">.</span><span class="n">fix</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-    
+
     <span class="c1"># Remove links (websites) and handles</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;http\S+|www\.\S+|\S+\.(com|net)|@\S+&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-    
+
     <span class="c1"># Tokenize the text into words</span>
     <span class="n">words</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-    
+
     <span class="c1"># Replace British English words</span>
     <span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="n">british_english_words</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">]</span>
-    
+
     <span class="c1"># Tag parts of speech</span>
     <span class="n">pos_tags</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">pos_tag</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
-    
+
     <span class="c1"># Remove punctuation (after tagging)</span>
     <span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">]</span>
-    
+
     <span class="c1"># Replace numbers with commas with &quot;TOKENNUM&quot;</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b\d{1,3}(,\d</span><span class="si">{3}</span><span class="s1">)+\b&#39;</span><span class="p">,</span> <span class="s1">&#39;TOKENNUM&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">))</span>
-    
+
     <span class="c1"># Replace currency symbols with &quot;TOKENCURRENCY&quot;</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\$\d+|\£\d+|\¢\d+)&#39;</span><span class="p">,</span> <span class="s1">&#39;TOKENCURRENCY&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-    
+
     <span class="c1"># Replace any non-alphanumeric characters except spaces with a space</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^a-zA-Z0-9_]+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-    
+
     <span class="c1"># Remove double spaces</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-    
+
     <span class="c1"># Replace decades like &quot;1920s&quot; or &quot;1920 s&quot; with &quot;token_decade&quot;</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b\d</span><span class="si">{4}</span><span class="s1">s?\b&#39;</span><span class="p">,</span> <span class="s1">&#39;token_decade&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-    
+
     <span class="c1"># Replace years with &quot;token_year&quot;</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b(19|20)\d</span><span class="si">{2}</span><span class="s1">\b&#39;</span><span class="p">,</span> <span class="s1">&#39;token_year&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-    
+
     <span class="c1"># Replace times in the format 00:00, 1:23, 00 00, or 1 23 followed by &quot;utc&quot; or a space and then &quot;utc&quot; with &quot;token_time&quot;</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b\d{1,2}[: ]\d</span><span class="si">{2}</span><span class="s1">\s?utc\b&#39;</span><span class="p">,</span> <span class="s1">&#39;token_time&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-    
+
     <span class="c1"># Replace numbers followed by am or pm with &quot;token_time&quot;</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b\d+(am|pm)\b&#39;</span><span class="p">,</span> <span class="s1">&#39;token_time&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-    
+
     <span class="c1"># Replace numbers followed by oz or ml with &quot;token_volume&quot;</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b\d+(oz|ml)\b&#39;</span><span class="p">,</span> <span class="s1">&#39;token_time&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-    
+
     <span class="c1"># Replace numeric numbers followed by m or km with &quot;token_distance&quot;</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b\d+(\.\d+)?\s*(m|meter|meters|km|in|inch|ft|feet|foot)\b&#39;</span><span class="p">,</span> <span class="s1">&#39;token_distance&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-    
+
     <span class="c1"># Replace numbers followed by c or f with &quot;token_temperature&quot;</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b\d+(\.\d+)?\s*(c|f)\b&#39;</span><span class="p">,</span> <span class="s1">&#39;token_temperature&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-    
+
     <span class="c1"># Replace ordinal numbers followed by st, nd, rd, th with &quot;token_ordinal&quot;</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b\d+(\.\d+)?\s*(st|nd|rd|th)\b&#39;</span><span class="p">,</span> <span class="s1">&#39;token_ordinal&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-    
+
     <span class="c1"># Replace sequences of just numbers with &quot;token_num&quot;</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b\d+\b&#39;</span><span class="p">,</span> <span class="s1">&#39;token_num&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span> 
-    
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b\d+\b&#39;</span><span class="p">,</span> <span class="s1">&#39;token_num&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
     <span class="c1"># Replace numbers followed by am or pm with &quot;token_time&quot;</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b\d+(k)\b&#39;</span><span class="p">,</span> <span class="s1">&#39;token_num&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-    
+
     <span class="c1"># Replace &quot;TOKENNUM&quot; with &quot;token_num&quot;</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;TOKENNUM&#39;</span><span class="p">,</span> <span class="s1">&#39;token_num&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-    
+
     <span class="c1"># Replace &quot;TOKENCURRENCY&quot; with &quot;token_currency&quot;</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;TOKENCURRENCY&#39;</span><span class="p">,</span> <span class="s1">&#39;token_currency&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-    
+
     <span class="c1"># Replace numbers followed by &quot;yearold&quot;, &quot;yearsold&quot;, &quot; year old&quot;, or &quot; years old&quot; with &quot;token_age&quot;</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b\d+(\s*year(s)?\s*old|(\s*yrs)?(\s*old)?)\b&#39;</span><span class="p">,</span> <span class="s1">&#39;token_age&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-    
+
     <span class="c1"># Tokenize the modified text again into words</span>
     <span class="n">words</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-    
+
     <span class="c1"># Remove stopwords</span>
     <span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">))</span>
     <span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">]</span>
-    
+
     <span class="c1"># Lemmatization using POS tags</span>
     <span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="n">lemmatizer</span><span class="o">.</span><span class="n">lemmatize</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">get_wordnet_pos</span><span class="p">(</span><span class="n">word</span><span class="p">))</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">]</span>
-    
+
     <span class="c1"># Join words back into a cleaned text</span>
     <span class="n">cleaned_text</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
-    
+
     <span class="k">return</span> <span class="n">cleaned_text</span>
 
 <span class="c1"># Apply the cleaning function to the text column in train and test datasets</span>
@@ -14971,7 +14978,7 @@ HEAD OF TRAIN:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Initialize the spell checker</span>
@@ -14980,10 +14987,10 @@ HEAD OF TRAIN:
 <span class="k">def</span> <span class="nf">process_unknown_words</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">spell_checker</span><span class="p">):</span>
     <span class="c1"># Tokenize the text into words</span>
     <span class="n">word_list</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-    
+
     <span class="c1"># Filter out known terms, spell checker&#39;s suggestions, and tokens</span>
     <span class="n">unknown_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">word_list</span> <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">valid_terms</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">word</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;token_&#39;</span><span class="p">)]</span>
-    
+
     <span class="c1"># Correct misspellings and split concatenated words</span>
     <span class="n">corrected_words</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">unknown_words</span><span class="p">:</span>
@@ -14999,7 +15006,7 @@ HEAD OF TRAIN:
                 <span class="c1"># Try to split concatenated words using regex patterns</span>
                 <span class="n">splits</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[A-Z]?[a-z]+|[A-Z]+(?=[A-Z][a-z])|[</span><span class="se">\&#39;</span><span class="s1">\w]+&#39;</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
                 <span class="n">splits</span> <span class="o">=</span> <span class="p">[</span><span class="n">split</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">split</span> <span class="ow">in</span> <span class="n">splits</span> <span class="k">if</span> <span class="n">split</span><span class="p">]</span>
-                
+
                 <span class="c1"># Further process each split</span>
                 <span class="n">processed_splits</span> <span class="o">=</span> <span class="p">[]</span>
                 <span class="k">for</span> <span class="n">split</span> <span class="ow">in</span> <span class="n">splits</span><span class="p">:</span>
@@ -15010,12 +15017,12 @@ HEAD OF TRAIN:
                         <span class="n">smaller_splits</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[A-Z]?[a-z]+&#39;</span><span class="p">,</span> <span class="n">split</span><span class="p">)</span>
                         <span class="n">smaller_splits</span> <span class="o">=</span> <span class="p">[</span><span class="n">smaller_split</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">smaller_split</span> <span class="ow">in</span> <span class="n">smaller_splits</span> <span class="k">if</span> <span class="n">smaller_split</span><span class="p">]</span>
                         <span class="n">processed_splits</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">smaller_splits</span><span class="p">)</span>
-                
+
                 <span class="k">if</span> <span class="n">processed_splits</span><span class="p">:</span>
                     <span class="n">corrected_words</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">processed_splits</span><span class="p">)</span>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">corrected_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>  <span class="c1"># Default to original word if no valid splits found</span>
-    
+
     <span class="k">return</span> <span class="n">corrected_words</span>
 
 <span class="n">train_unknown_words</span> <span class="o">=</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;text_cleaned&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">process_unknown_words</span><span class="p">,</span> <span class="n">spell_checker</span><span class="o">=</span><span class="n">spell_us</span><span class="p">)</span>
@@ -15032,7 +15039,7 @@ HEAD OF TRAIN:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Function to check for non-letter characters in a string</span>
@@ -15043,13 +15050,13 @@ HEAD OF TRAIN:
 <span class="k">def</span> <span class="nf">extract_keywords</span><span class="p">(</span><span class="n">keywords</span><span class="p">):</span>
     <span class="n">single_word_keywords</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
     <span class="n">two_word_keywords</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-    
+
     <span class="k">for</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="n">keywords</span><span class="p">:</span>
         <span class="k">if</span> <span class="s1">&#39; &#39;</span> <span class="ow">in</span> <span class="n">keyword</span><span class="p">:</span>
             <span class="n">two_word_keywords</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">keyword</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">single_word_keywords</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">keyword</span><span class="p">)</span>
-    
+
     <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">single_word_keywords</span><span class="p">),</span> <span class="nb">list</span><span class="p">(</span><span class="n">two_word_keywords</span><span class="p">)</span>
 
 <span class="c1"># Function to normalize keywords</span>
@@ -15064,17 +15071,17 @@ HEAD OF TRAIN:
 <span class="c1"># Function to match keywords</span>
 <span class="k">def</span> <span class="nf">match_keywords</span><span class="p">(</span><span class="n">text_cleaned</span><span class="p">,</span> <span class="n">single_word_keywords</span><span class="p">,</span> <span class="n">two_word_keywords</span><span class="p">):</span>
     <span class="n">normalized_text</span> <span class="o">=</span> <span class="n">normalize_keywords</span><span class="p">(</span><span class="n">text_cleaned</span><span class="p">)</span>
-         
+
     <span class="c1"># Match two-word keywords</span>
     <span class="k">for</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="n">two_word_keywords</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="n">normalized_text</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">keyword</span>
-    
+
     <span class="c1"># Match single-word keywords</span>
     <span class="k">for</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="n">single_word_keywords</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b</span><span class="si">{}</span><span class="s1">\b&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">keyword</span><span class="p">)),</span> <span class="n">normalized_text</span><span class="p">):</span>
             <span class="k">return</span> <span class="n">keyword</span>
-    
+
     <span class="k">return</span> <span class="kc">None</span>
 
 <span class="c1"># Extract keywords from train_df and test_df combined</span>
@@ -15112,7 +15119,7 @@ HEAD OF TRAIN:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Function to remove punctuation from a string</span>
@@ -15173,7 +15180,7 @@ HEAD OF TRAIN:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">CleanLocation</span><span class="p">:</span>
@@ -15197,17 +15204,17 @@ HEAD OF TRAIN:
         <span class="bp">self</span><span class="o">.</span><span class="n">global_term_corrections</span> <span class="o">=</span> <span class="n">global_term_corrections</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">web_types_pattern</span> <span class="o">=</span> <span class="n">web_types_pattern</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">misc_corrections</span> <span class="o">=</span> <span class="n">misc_corrections</span>
-        
+
     <span class="k">def</span> <span class="nf">apply_city_corrections</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">])</span> <span class="ow">and</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">city_corrections</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">city_corrections</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]]</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">apply_city_exact</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">])</span> <span class="ow">and</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cities</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">city_additional_conditions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="n">location_clean</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">location_clean</span><span class="p">):</span>
@@ -15232,12 +15239,12 @@ HEAD OF TRAIN:
         <span class="n">location_clean</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">location_cleaned</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">location_clean</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
             <span class="k">for</span> <span class="n">state_abb</span><span class="p">,</span> <span class="n">state_name</span> <span class="ow">in</span> <span class="n">us_state_abb_to_name</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-                <span class="n">state_part</span> <span class="o">=</span> <span class="n">state_name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>  
+                <span class="n">state_part</span> <span class="o">=</span> <span class="n">state_name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
                 <span class="k">if</span> <span class="n">state_part</span> <span class="ow">in</span> <span class="n">location_clean</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
                     <span class="k">for</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">cities</span><span class="p">:</span>
-                        <span class="n">city_part</span> <span class="o">=</span> <span class="n">city</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>  
+                        <span class="n">city_part</span> <span class="o">=</span> <span class="n">city</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
                         <span class="k">if</span> <span class="n">city_part</span> <span class="ow">in</span> <span class="n">location_clean</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">and</span> <span class="n">state_part</span> <span class="ow">in</span> <span class="n">location_clean</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
-                            <span class="k">return</span> <span class="n">city</span>  
+                            <span class="k">return</span> <span class="n">city</span>
         <span class="k">return</span> <span class="n">location_cleaned</span>
 
     <span class="k">def</span> <span class="nf">city_additional_conditions_spacing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
@@ -15247,86 +15254,86 @@ HEAD OF TRAIN:
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">location_cleaned</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">location_clean</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
             <span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">extended_countries</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">location_clean</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
-                    <span class="n">country_part</span> <span class="o">=</span> <span class="n">country</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>  
+                    <span class="n">country_part</span> <span class="o">=</span> <span class="n">country</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
                     <span class="k">for</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">cities</span><span class="p">:</span>
-                        <span class="n">city_part</span> <span class="o">=</span> <span class="n">city</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>  
+                        <span class="n">city_part</span> <span class="o">=</span> <span class="n">city</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
                         <span class="k">if</span> <span class="n">city_part</span> <span class="ow">in</span> <span class="n">location_clean</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">and</span> <span class="n">country_part</span> <span class="ow">in</span> <span class="n">location_clean</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
-                            <span class="k">return</span> <span class="n">city</span>  
+                            <span class="k">return</span> <span class="n">city</span>
         <span class="k">return</span> <span class="n">location_cleaned</span>
-    
+
     <span class="k">def</span> <span class="nf">apply_us_state_corrections</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">])</span> <span class="ow">and</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">us_state_corrections</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">us_state_corrections</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]]</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">apply_us_state_exact</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">])</span> <span class="ow">and</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">us_state_names</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">us_state_additional_conditions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">location</span><span class="p">):</span>
             <span class="k">return</span> <span class="n">location</span>
-        
+
         <span class="n">words</span> <span class="o">=</span> <span class="n">location</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-        
+
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)):</span>
             <span class="n">state_part</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">[:</span><span class="n">i</span><span class="p">])</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
             <span class="n">additional_part</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">i</span><span class="p">:])</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-            
+
             <span class="k">if</span> <span class="n">state_part</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">us_state_names</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">additional_part</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;usa&#39;</span><span class="p">,</span> <span class="s1">&#39;us&#39;</span><span class="p">,</span> <span class="s1">&#39;united states&#39;</span><span class="p">,</span> <span class="s1">&#39;united states of america&#39;</span><span class="p">}:</span>
                     <span class="k">return</span> <span class="n">state_part</span>
                 <span class="k">if</span> <span class="n">additional_part</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;north&#39;</span><span class="p">,</span> <span class="s1">&#39;south&#39;</span><span class="p">,</span> <span class="s1">&#39;east&#39;</span><span class="p">,</span> <span class="s1">&#39;west&#39;</span><span class="p">}:</span>  <span class="c1"># Adjust based on your geographic directions list</span>
                     <span class="k">return</span> <span class="n">state_part</span>
-        
+
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-    
+
     <span class="k">def</span> <span class="nf">apply_country_corrections</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">])</span> <span class="ow">and</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">country_corrections</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">country_corrections</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]]</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">apply_country_exact</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">])</span> <span class="ow">and</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">countries</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">apply_country_common_to_full</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">])</span> <span class="ow">and</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">country_common_to_full</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">country_common_to_full</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]]</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">apply_continent_exact</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">])</span> <span class="ow">and</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">continents</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">apply_region_terms_exact</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">])</span> <span class="ow">and</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">region_terms</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">apply_global_regions_corrections</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">])</span> <span class="ow">and</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">global_regions_corrections</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">global_regions_corrections</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]]</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">apply_global_regions_exact</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">])</span> <span class="ow">and</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">global_regions</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">apply_global_term_corrections</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">])</span> <span class="ow">and</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">global_term_corrections</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">global_term_corrections</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]]</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">apply_global_terms_exact</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">])</span> <span class="ow">and</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">global_terms</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">remaining_us_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">])</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
             <span class="n">location_clean_lower</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
@@ -15334,7 +15341,7 @@ HEAD OF TRAIN:
                 <span class="k">if</span> <span class="n">state</span> <span class="ow">in</span> <span class="n">location_clean_lower</span><span class="p">:</span>
                     <span class="k">return</span> <span class="n">state</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">remaining_countries</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">])</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
             <span class="n">location_clean_lower</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
@@ -15342,21 +15349,21 @@ HEAD OF TRAIN:
                 <span class="k">if</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">location_clean_lower</span><span class="p">:</span>
                     <span class="k">return</span> <span class="n">country</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">remaining_cities_with_regions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]):</span>
             <span class="n">location_clean_lower</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-            
+
             <span class="k">for</span> <span class="n">city</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cities</span><span class="p">:</span>
                 <span class="n">city_lower</span> <span class="o">=</span> <span class="n">city</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
                 <span class="k">if</span> <span class="n">city_lower</span> <span class="ow">in</span> <span class="n">location_clean_lower</span><span class="p">:</span>
                     <span class="n">remainder</span> <span class="o">=</span> <span class="n">location_clean_lower</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">city_lower</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-                    <span class="k">if</span> <span class="p">(</span><span class="n">remainder</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">us_state_names</span> <span class="ow">or</span> 
-                        <span class="n">remainder</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">us_state_abb_to_name</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="ow">or</span> 
+                    <span class="k">if</span> <span class="p">(</span><span class="n">remainder</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">us_state_names</span> <span class="ow">or</span>
+                        <span class="n">remainder</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">us_state_abb_to_name</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="ow">or</span>
                         <span class="n">remainder</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">global_regions</span><span class="p">):</span>
                         <span class="k">return</span> <span class="n">city</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">apply_web_exact</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]):</span>
             <span class="n">location_clean_lower</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
@@ -15364,7 +15371,7 @@ HEAD OF TRAIN:
             <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
                 <span class="k">return</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">apply_misc_corrections</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">])</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
             <span class="n">location_clean_lower</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
@@ -15372,7 +15379,7 @@ HEAD OF TRAIN:
                 <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="n">location_clean_lower</span><span class="p">:</span>
                     <span class="k">return</span> <span class="n">value</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">apply_city_remaining</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">])</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
             <span class="n">location_clean_lower</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
@@ -15381,19 +15388,19 @@ HEAD OF TRAIN:
                 <span class="k">if</span> <span class="n">city_lower</span> <span class="ow">in</span> <span class="n">location_clean_lower</span><span class="p">:</span>
                     <span class="k">return</span> <span class="n">city</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">apply_us_state_abb_exact</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">])</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
             <span class="n">location_clean_lower</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
             <span class="k">if</span> <span class="n">location_clean_lower</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">us_state_abb_to_name</span><span class="p">:</span>
                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">us_state_abb_to_name</span><span class="p">[</span><span class="n">location_clean_lower</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">fill_remaining_with_clean</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]):</span>
             <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_clean&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span>
-    
+
     <span class="k">def</span> <span class="nf">apply_cleaning_steps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">):</span>
         <span class="n">df</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">apply_city_corrections</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
         <span class="n">df</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">apply_city_exact</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -15458,7 +15465,7 @@ HEAD OF TRAIN:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create copies of the DataFrames to ensure operations are performed on the copies</span>
@@ -15479,16 +15486,16 @@ HEAD OF TRAIN:
 <span class="c1"># Filter rows where location column is NaN</span>
 <span class="n">locations_nans</span> <span class="o">=</span> <span class="n">combined_df</span><span class="p">[</span><span class="n">combined_df</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()]</span>
 
-<span class="c1"># Reset the index </span>
+<span class="c1"># Reset the index</span>
 <span class="n">locations_nans</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1">#Extract relevant columns for locations_nans</span>
 <span class="n">columns_to_add</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="s1">&#39;keyword&#39;</span><span class="p">,</span> <span class="s1">&#39;keyword_cleaned&#39;</span><span class="p">,</span> <span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="s1">&#39;text_cleaned&#39;</span><span class="p">]</span>
 
 <span class="c1">#Concatenate filtered rows from train_df and test_df to locations_nans</span>
-<span class="n">locations_nans</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">locations_nans</span><span class="p">,</span> 
-                            <span class="n">rows_missing_location_cleaned_train</span><span class="p">[</span><span class="n">columns_to_add</span><span class="p">],</span> 
-                            <span class="n">rows_missing_location_cleaned_test</span><span class="p">[</span><span class="n">columns_to_add</span><span class="p">]],</span> 
+<span class="n">locations_nans</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">locations_nans</span><span class="p">,</span>
+                            <span class="n">rows_missing_location_cleaned_train</span><span class="p">[</span><span class="n">columns_to_add</span><span class="p">],</span>
+                            <span class="n">rows_missing_location_cleaned_test</span><span class="p">[</span><span class="n">columns_to_add</span><span class="p">]],</span>
                            <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Combine location_cleaned columns from both DataFrames</span>
@@ -15520,10 +15527,10 @@ HEAD OF TRAIN:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Function to find valid cities in text </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Function to find valid cities in text</span>
 <span class="k">def</span> <span class="nf">find_city_in_text</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">sorted_valid_cities</span><span class="p">,</span> <span class="n">common_to_full</span><span class="p">,</span> <span class="n">location_cleaned</span><span class="p">):</span>
     <span class="c1"># Check if location_cleaned is NaN</span>
     <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">location_cleaned</span><span class="p">):</span>
@@ -15538,7 +15545,7 @@ HEAD OF TRAIN:
             <span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;\b</span><span class="si">{}</span><span class="s1">\b&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">city</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
             <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()):</span>
                 <span class="k">return</span> <span class="n">city</span>
-    
+
     <span class="k">return</span> <span class="n">location_cleaned</span>
 
 <span class="c1"># Function to find valid us states in text</span>
@@ -15547,23 +15554,23 @@ HEAD OF TRAIN:
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]):</span>
             <span class="n">text_cleaned</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;text_cleaned&#39;</span><span class="p">]</span>
             <span class="n">found_state</span> <span class="o">=</span> <span class="kc">None</span>
-            
+
             <span class="c1"># Check for US state names</span>
             <span class="k">for</span> <span class="n">state</span> <span class="ow">in</span> <span class="n">us_state_names</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">state</span> <span class="ow">in</span> <span class="n">text_cleaned</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
                     <span class="n">found_state</span> <span class="o">=</span> <span class="n">state</span>
                     <span class="k">break</span>
-            
+
             <span class="c1"># If no US state name found, check us_state_corrections</span>
             <span class="k">if</span> <span class="n">found_state</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="k">for</span> <span class="n">state</span><span class="p">,</span> <span class="n">correction</span> <span class="ow">in</span> <span class="n">us_state_corrections</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
                     <span class="k">if</span> <span class="n">state</span> <span class="ow">in</span> <span class="n">text_cleaned</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
                         <span class="n">found_state</span> <span class="o">=</span> <span class="n">correction</span>
                         <span class="k">break</span>
-            
+
             <span class="k">if</span> <span class="n">found_state</span><span class="p">:</span>
                 <span class="n">locations_nans</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">found_state</span>
-    
+
     <span class="k">return</span> <span class="n">locations_nans</span>
 
 <span class="c1"># Function to find global regions in text</span>
@@ -15574,7 +15581,7 @@ HEAD OF TRAIN:
             <span class="k">for</span> <span class="n">region</span> <span class="ow">in</span> <span class="n">global_regions</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">region</span> <span class="ow">in</span> <span class="n">text_cleaned</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
                     <span class="n">locations_nans</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">region</span>
-                    <span class="k">break</span>   
+                    <span class="k">break</span>
     <span class="k">return</span> <span class="n">locations_nans</span>
 
 <span class="c1"># Function to find continents in text</span>
@@ -15585,7 +15592,7 @@ HEAD OF TRAIN:
             <span class="k">for</span> <span class="n">continent</span> <span class="ow">in</span> <span class="n">continents</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">continent</span> <span class="ow">in</span> <span class="n">text_cleaned</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
                     <span class="n">locations_nans</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">continent</span>
-                    <span class="k">break</span>  
+                    <span class="k">break</span>
     <span class="k">return</span> <span class="n">locations_nans</span>
 
 <span class="c1"># Function to find countries in text</span>
@@ -15594,36 +15601,36 @@ HEAD OF TRAIN:
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]):</span>
             <span class="n">text_cleaned</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;text_cleaned&#39;</span><span class="p">]</span>
             <span class="n">found_country</span> <span class="o">=</span> <span class="kc">None</span>
-            
+
             <span class="c1"># Check if any sorted_valid_countries is found in text_cleaned</span>
             <span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">sorted_valid_countries</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">text_cleaned</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
                     <span class="n">found_country</span> <span class="o">=</span> <span class="n">country</span>
                     <span class="k">break</span>
-            
+
             <span class="c1"># If no valid country is found, check for country_common_to_full keys longer than 4 characters</span>
             <span class="k">if</span> <span class="n">found_country</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="k">for</span> <span class="n">country</span><span class="p">,</span> <span class="n">full_name</span> <span class="ow">in</span> <span class="n">country_common_to_full</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
                     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">country</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">4</span> <span class="ow">and</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">text_cleaned</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
                         <span class="n">found_country</span> <span class="o">=</span> <span class="n">full_name</span>
                         <span class="k">break</span>
-                        
+
             <span class="c1"># If no valid country is found, check the rest of countries</span>
             <span class="k">if</span> <span class="n">found_country</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">:</span>
                     <span class="k">if</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">text_cleaned</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
                         <span class="n">found_country</span> <span class="o">=</span> <span class="n">country</span>
                         <span class="k">break</span>
-                        
+
             <span class="c1"># Add condition for uk</span>
             <span class="k">if</span> <span class="n">found_country</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="k">if</span> <span class="s1">&#39; uk &#39;</span> <span class="ow">in</span> <span class="n">text_cleaned</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">or</span> <span class="n">text_cleaned</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;uk &#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">text_cleaned</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39; uk&#39;</span><span class="p">):</span>
                     <span class="n">found_country</span> <span class="o">=</span> <span class="s1">&#39;united kingdom&#39;</span>
-            
+
             <span class="c1"># Update location_cleaned if a country name is found</span>
             <span class="k">if</span> <span class="n">found_country</span><span class="p">:</span>
                 <span class="n">locations_nans</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">found_country</span>
-    
+
     <span class="k">return</span> <span class="n">locations_nans</span>
 
 <span class="c1"># Function to find additional cities in text</span>
@@ -15632,27 +15639,27 @@ HEAD OF TRAIN:
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]):</span>
             <span class="n">text_cleaned</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;text_cleaned&#39;</span><span class="p">]</span>
             <span class="n">found_city</span> <span class="o">=</span> <span class="kc">None</span>
-            
+
             <span class="k">for</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">sorted_valid_cities</span><span class="p">:</span>
                 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">city</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">4</span> <span class="ow">and</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">text_cleaned</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
                     <span class="n">found_city</span> <span class="o">=</span> <span class="n">city</span>
                     <span class="k">break</span>
-            
+
             <span class="k">if</span> <span class="n">found_city</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="k">for</span> <span class="n">city</span><span class="p">,</span> <span class="n">full_name</span> <span class="ow">in</span> <span class="n">city_corrections</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
                     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">city</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">text_cleaned</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
                         <span class="n">found_city</span> <span class="o">=</span> <span class="n">full_name</span>
                         <span class="k">break</span>
-                        
+
             <span class="k">if</span> <span class="n">found_city</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="k">for</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">cities_with_exemption</span><span class="p">:</span>
                     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">city</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">4</span> <span class="ow">and</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">text_cleaned</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
                         <span class="n">found_city</span> <span class="o">=</span> <span class="n">city</span>
                         <span class="k">break</span>
-            
+
             <span class="k">if</span> <span class="n">found_city</span><span class="p">:</span>
                 <span class="n">locations_nans</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">found_city</span>
-    
+
     <span class="k">return</span> <span class="n">locations_nans</span>
 
 <span class="c1"># Function to find valid misc corrections</span>
@@ -15661,15 +15668,15 @@ HEAD OF TRAIN:
         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]):</span>
             <span class="n">text_cleaned</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;text_cleaned&#39;</span><span class="p">]</span>
             <span class="n">found_correction</span> <span class="o">=</span> <span class="kc">None</span>
-            
+
             <span class="k">for</span> <span class="n">misc</span><span class="p">,</span> <span class="n">correction</span> <span class="ow">in</span> <span class="n">misc_corrections</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
                 <span class="k">if</span> <span class="n">misc</span> <span class="ow">in</span> <span class="n">text_cleaned</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
                     <span class="n">found_correction</span> <span class="o">=</span> <span class="n">correction</span>
                     <span class="k">break</span>
-            
+
             <span class="k">if</span> <span class="n">found_correction</span><span class="p">:</span>
                 <span class="n">locations_nans</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">found_correction</span>
-    
+
     <span class="k">return</span> <span class="n">locations_nans</span>
 
 <span class="c1"># Function to find web_types</span>
@@ -15697,7 +15704,7 @@ HEAD OF TRAIN:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Apply find_city_in_text function</span>
@@ -15738,7 +15745,7 @@ HEAD OF TRAIN:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Merge only the ids already in train_df and test_df</span>
@@ -15764,26 +15771,26 @@ HEAD OF TRAIN:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Description of the dataset</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;TRAIN OVERVIEW&#39;</span><span class="p">,</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">SHAPE OF TRAIN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span>
-      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">COLUMNS IN TRAIN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> 
+      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">COLUMNS IN TRAIN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">DATA TYPES OF COLUMNS IN TRAIN:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="o">.</span><span class="n">dtypes</span><span class="p">,</span>
-      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE ID VALUES: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>       
+      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE ID VALUES: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">NUMBER OF NA VALUES IN ID COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
-      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE KEYWORDS IN KEYWORD COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;keyword&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span> 
-      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE KEYWORDS IN CLEANED KEYWORD COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;keyword_cleaned&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>       
+      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE KEYWORDS IN KEYWORD COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;keyword&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
+      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE KEYWORDS IN CLEANED KEYWORD COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;keyword_cleaned&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">NUMBER OF NA VALUES IN KEYWORD COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;keyword&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">NUMBER OF NA VALUES IN CLEANED KEYWORD COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;keyword_cleaned&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
-      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE LOCATIONS IN LOCATION COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>      
+      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE LOCATIONS IN LOCATION COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE LOCATIONS IN CLEANED LOCATION COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">NUMBER OF NA VALUES IN LOCATION COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">NUMBER OF NA VALUES IN CLEANED LOCATION COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;location_cleaned&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE WORDS IN TEXT COLUMN: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">split</span><span class="p">())),</span>
-      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE WORDS IN CLEANED TEXT COLUMN: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;text_cleaned&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">split</span><span class="p">())),</span>       
+      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE WORDS IN CLEANED TEXT COLUMN: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;text_cleaned&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">split</span><span class="p">())),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">NUMBER OF NA VALUES IN TEXT COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">NUMBER OF NA VALUES IN CLEANED TEXT COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;text_cleaned&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">MINIMUM UNIQUE WORDS IN TEXT COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">())))</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
@@ -15792,7 +15799,7 @@ HEAD OF TRAIN:
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">MEAN UNIQUE WORDS IN CLEANED TEXT COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;text_cleaned&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">())))</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">MAXIMUM UNIQUE WORDS IN TEXT COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">())))</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">MAXIMUM UNIQUE WORDS IN CLEANED TEXT COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;text_cleaned&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">())))</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
-      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE TARGET VALUES: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>       
+      <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">TOTAL UNIQUE TARGET VALUES: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">NUMBER OF NA VALUES IN TARGET COLUMN: &#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
       <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">HEAD OF TRAIN: </span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">train_df</span><span class="o">.</span><span class="n">head</span><span class="p">(),</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
@@ -15806,9 +15813,14 @@ HEAD OF TRAIN:
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>TRAIN OVERVIEW 
@@ -15911,7 +15923,7 @@ HEAD OF TRAIN:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Count &#39;other&#39; entries in train_df</span>
@@ -15933,9 +15945,14 @@ HEAD OF TRAIN:
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Number of &#39;other&#39; entries in train_df: 21
@@ -15953,7 +15970,8 @@ Number of &#39;other&#39; entries in test_df: 9
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="2-Exploratory-Data-Analysis">2 Exploratory Data Analysis<a class="anchor-link" href="#2-Exploratory-Data-Analysis">&#182;</a></h1><h2 id="2.1-Target-Variable-Analysis">2.1 Target Variable Analysis<a class="anchor-link" href="#2.1-Target-Variable-Analysis">&#182;</a></h2><p>The target variable in the dataset indicates whether a tweet is related to a real disaster (target=1) or not (target=0). Understanding the distribution of this variable is crucial for assessing the balance of the dataset and potential biases. Here’s an overview:</p>
 <p>Target Variable Distribution
 The distribution of the target variable is as follows:</p>
@@ -15969,7 +15987,7 @@ Tweets not related to real disasters (target=0): 4342 or 57.03%</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculate counts and percentages</span>
@@ -15999,9 +16017,14 @@ Tweets not related to real disasters (target=0): 4342 or 57.03%</p>
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 
 
@@ -16024,7 +16047,8 @@ class="
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="2.2-Keyword-vs-Target-Analysis">2.2 Keyword vs Target Analysis<a class="anchor-link" href="#2.2-Keyword-vs-Target-Analysis">&#182;</a></h2><p>Analyzing the relationship between keywords and the target variable provides insights into the association between specific selected terms and disaster-related tweets:</p>
 
 </div>
@@ -16035,7 +16059,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Group by &#39;keyword_cleaned&#39; and &#39;target&#39;, then count the occurrences</span>
@@ -16069,9 +16093,14 @@ class="
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 
 
@@ -16082,6 +16111,10 @@ class="
 </div>
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 
 
@@ -16104,7 +16137,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Group by &#39;keyword_cleaned&#39; and &#39;target&#39;, then count the occurrences</span>
@@ -16156,9 +16189,14 @@ class="
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 
 
@@ -16181,7 +16219,8 @@ class="
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="2.3-Location-vs-Target-Analysis">2.3 Location vs Target Analysis<a class="anchor-link" href="#2.3-Location-vs-Target-Analysis">&#182;</a></h2><p>Exploring the relationship between locations and the target variable helps understand geographical patterns in disaster-related tweets:</p>
 <p>Figure 2.4 illustrates that the data locations are heavily skewed towards the United States. Both Figures 2.4 and 2.4 show that there are substantial differences between the use of locations and diaster versus not a disaster tweets.</p>
 
@@ -16193,7 +16232,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Group by &#39;location_cleaned&#39; and &#39;target&#39;, then count the occurrences</span>
@@ -16227,9 +16266,14 @@ class="
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 
 
@@ -16240,6 +16284,10 @@ class="
 </div>
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 
 
@@ -16262,7 +16310,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Filter out &#39;other&#39; location category</span>
@@ -16305,9 +16353,14 @@ class="
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 
 
@@ -16330,7 +16383,8 @@ class="
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="2.4-Text-Vs-Target">2.4 Text Vs Target<a class="anchor-link" href="#2.4-Text-Vs-Target">&#182;</a></h2><p>Analyzing the relationship between cleaned text features and the target variable provides insights into the textual characteristics of disaster-related tweets:</p>
 
 </div>
@@ -16341,7 +16395,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Function to filter tokens based on the criteria</span>
@@ -16412,9 +16466,14 @@ class="
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 
 
@@ -16437,7 +16496,8 @@ class="
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="2.5-Feature-Engineering">2.5 Feature Engineering<a class="anchor-link" href="#2.5-Feature-Engineering">&#182;</a></h2><p>In the process of enhancing the predictive capability of the model, several key feature engineering strategies were implemented during the cleaning of text data (<code>text_cleaned</code>) and other relevant dataset attributes:</p>
 <ol>
 <li>Tokenization</li>
@@ -16469,7 +16529,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
@@ -16545,9 +16605,14 @@ class="
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 
 
@@ -16562,6 +16627,10 @@ class="
 </div>
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Selected words: [&#39;token_num&#39;, &#39;get&#39;, &#39;like&#39;, &#39;fire&#39;, &#39;go&#39;, &#39;amp&#39;, &#39;token_decade&#39;, &#39;via&#39;, &#39;one&#39;, &#39;new&#39;, &#39;people&#39;, &#39;scream&#39;, &#39;would&#39;, &#39;say&#39;, &#39;news&#39;, &#39;make&#39;, &#39;video&#39;, &#39;time&#39;, &#39;come&#39;, &#39;see&#39;, &#39;year&#39;, &#39;disaster&#39;, &#39;kill&#39;, &#39;want&#39;, &#39;love&#39;, &#39;body&#39;, &#39;flood&#39;, &#39;attack&#39;, &#39;day&#39;, &#39;look&#39;]
@@ -16578,7 +16647,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Define the colors for &#39;Disaster&#39; and &#39;Not Disaster&#39;</span>
@@ -16618,9 +16687,14 @@ class="
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 
 
@@ -16635,6 +16709,10 @@ class="
 </div>
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 
 
@@ -16657,7 +16735,8 @@ class="
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="3-Model-Building">3 Model Building<a class="anchor-link" href="#3-Model-Building">&#182;</a></h1><h2 id="3.1-Preparing-the-Data-for-Models">3.1 Preparing the Data for Models<a class="anchor-link" href="#3.1-Preparing-the-Data-for-Models">&#182;</a></h2>
 </div>
 </div>
@@ -16667,7 +16746,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -16676,6 +16755,8 @@ class="
 <span class="kn">from</span> <span class="nn">imblearn.over_sampling</span> <span class="kn">import</span> <span class="n">SMOTE</span>
 <span class="kn">from</span> <span class="nn">scipy.sparse</span> <span class="kn">import</span> <span class="n">hstack</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+<span class="kn">import</span> <span class="nn">torch.optim</span> <span class="k">as</span> <span class="nn">optim</span>
 
 <span class="c1"># Split the dataset into training and validation sets (80% train, 20% validation)</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">train_df</span><span class="p">[[</span><span class="s1">&#39;keyword_cleaned&#39;</span><span class="p">,</span> <span class="s1">&#39;location_cleaned&#39;</span><span class="p">,</span> <span class="s1">&#39;text_cleaned&#39;</span><span class="p">,</span> <span class="s1">&#39;text_len_normalized&#39;</span><span class="p">,</span> <span class="s1">&#39;word_count_normalized&#39;</span><span class="p">]]</span>
@@ -16741,9 +16822,14 @@ class="
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Train Set Shape: (6946, 7457)
@@ -16763,7 +16849,7 @@ Class Distribution in Train Set after SMOTE: {0: 3473, 1: 3473}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">TextDataset</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
@@ -16803,7 +16889,7 @@ Class Distribution in Train Set after SMOTE: {0: 3473, 1: 3473}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
@@ -16829,7 +16915,7 @@ Class Distribution in Train Set after SMOTE: {0: 3473, 1: 3473}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load the datasets</span>
@@ -16856,7 +16942,8 @@ Class Distribution in Train Set after SMOTE: {0: 3473, 1: 3473}
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="3.2-Model-Architecture:-LSTM-Model">3.2 Model Architecture: LSTM Model<a class="anchor-link" href="#3.2-Model-Architecture:-LSTM-Model">&#182;</a></h2><p>The LSTM model is designed for sequence-based prediction tasks. It uses a Long Short-Term Memory (LSTM) layer to capture dependencies over time, making it ideal for sequential data. The components are:</p>
 <ul>
 <li>LSTM Layer: The LSTM layer processes input sequences and retains important information across time steps, using its hidden and cell states.</li>
@@ -16873,38 +16960,35 @@ Class Distribution in Train Set after SMOTE: {0: 3473, 1: 3473}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
-<span class="kn">import</span> <span class="nn">torch.optim</span> <span class="k">as</span> <span class="nn">optim</span>
-
-<span class="k">class</span> <span class="nc">LSTMModel</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">LSTMModel</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_dim</span><span class="p">,</span> <span class="n">hidden_dim</span><span class="p">,</span> <span class="n">output_dim</span><span class="p">,</span> <span class="n">num_layers</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dropout_rate</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">LSTMModel</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        
+
         <span class="c1"># LSTM layer</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lstm</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">LSTM</span><span class="p">(</span><span class="n">input_dim</span><span class="p">,</span> <span class="n">hidden_dim</span><span class="p">,</span> <span class="n">num_layers</span><span class="p">,</span> <span class="n">batch_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-        
+
         <span class="c1"># Fully connected layer</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fc</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">hidden_dim</span><span class="p">,</span> <span class="n">output_dim</span><span class="p">)</span>
-        
+
         <span class="c1"># Dropout layer for regularization</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">dropout_rate</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="c1"># x is of shape (batch_size, seq_len, input_size)</span>
-        
+
         <span class="c1"># LSTM layer</span>
         <span class="n">lstm_out</span><span class="p">,</span> <span class="p">(</span><span class="n">hn</span><span class="p">,</span> <span class="n">cn</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lstm</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        
+
         <span class="c1"># Use the output of the last LSTM time step (last hidden state)</span>
         <span class="n">lstm_out</span> <span class="o">=</span> <span class="n">lstm_out</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>  <span class="c1"># Shape: (batch_size, hidden_dim)</span>
-        
+
         <span class="c1"># Pass through dropout and fully connected layer</span>
         <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">lstm_out</span><span class="p">)</span>
         <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
-        
+
         <span class="k">return</span> <span class="n">out</span>
 
 <span class="c1"># Model hyperparameters section</span>
@@ -16941,7 +17025,7 @@ Class Distribution in Train Set after SMOTE: {0: 3473, 1: 3473}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -16964,11 +17048,11 @@ Class Distribution in Train Set after SMOTE: {0: 3473, 1: 3473}
             <span class="c1"># Forward pass</span>
             <span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
             <span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
-            
+
             <span class="c1"># Backward pass and optimization</span>
             <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
             <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
-            
+
             <span class="c1"># Track loss and accuracy</span>
             <span class="n">running_loss</span> <span class="o">+=</span> <span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
             <span class="n">_</span><span class="p">,</span> <span class="n">predicted</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -17003,7 +17087,7 @@ Class Distribution in Train Set after SMOTE: {0: 3473, 1: 3473}
 
         <span class="c1"># Print the statistics</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Epoch [</span><span class="si">{</span><span class="n">epoch</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">num_epochs</span><span class="si">}</span><span class="s2">], Train Loss: </span><span class="si">{</span><span class="n">train_loss</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, Train Accuracy: </span><span class="si">{</span><span class="n">train_accuracy</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, Val Loss: </span><span class="si">{</span><span class="n">val_loss</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, Val Accuracy: </span><span class="si">{</span><span class="n">val_accuracy</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    
+
     <span class="c1"># Return the saved data</span>
     <span class="k">return</span> <span class="p">{</span>
         <span class="s1">&#39;train_losses&#39;</span><span class="p">:</span> <span class="n">train_losses</span><span class="p">,</span>
@@ -17031,9 +17115,14 @@ Class Distribution in Train Set after SMOTE: {0: 3473, 1: 3473}
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Epoch [1/10], Train Loss: 0.5901, Train Accuracy: 0.6818, Val Loss: 0.4487, Val Accuracy: 0.8070
@@ -17059,7 +17148,8 @@ Epoch [10/10], Train Loss: 0.0380, Train Accuracy: 0.9853, Val Loss: 1.2019, Val
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="4-Results-and-Analysis">4 Results and Analysis<a class="anchor-link" href="#4-Results-and-Analysis">&#182;</a></h1><h2 id="4.1-Hyperparameter-Tuning">4.1 Hyperparameter Tuning<a class="anchor-link" href="#4.1-Hyperparameter-Tuning">&#182;</a></h2><p>Hyperparameter tuning is essential for optimizing the performance of machine learning models. It involves systematically exploring combinations of key parameters to determine the configuration that produces the best results for the task at hand. For this project, the hyperparameter tuning process focuses on the following parameters for the LSTM model:</p>
 <p>Hidden Dimension (hidden_dim): Determines the number of features in the hidden state of the LSTM. Larger dimensions allow the model to capture more information but increase computational complexity and the risk of overfitting.</p>
 <p>Number of LSTM Layers (num_layers): Specifies the number of stacked LSTM layers in the model. Increasing this value allows the model to capture more complex relationships in the data but may also lead to higher training time and potential overfitting.</p>
@@ -17089,7 +17179,7 @@ Epoch [10/10], Train Loss: 0.0380, Train Accuracy: 0.9853, Val Loss: 1.2019, Val
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
@@ -17318,9 +17408,14 @@ Epoch [10/10], Train Loss: 0.0380, Train Accuracy: 0.9853, Val Loss: 1.2019, Val
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Training model with hidden_dim=32, num_layers=1, dropout_rate=0.3, lr=0.001
@@ -18819,7 +18914,8 @@ Finished training for hidden_dim=256, num_layers=4, dropout_rate=0.7, lr=0.01
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="4.2-Model-Performance-Based-on-Hyperparameter-Comparison">4.2 Model Performance Based on Hyperparameter Comparison<a class="anchor-link" href="#4.2-Model-Performance-Based-on-Hyperparameter-Comparison">&#182;</a></h2><p>This section compares the performance of various models by exploring the impact of different hyperparameters on the LSTM model’s performance. Hyperparameters such as hidden dimensions, the number of LSTM layers, dropout rate, and learning rate were tuned and tested to assess their effects on model accuracy and loss.</p>
 <h3 id="Hyperparameters-Tested:">Hyperparameters Tested:<a class="anchor-link" href="#Hyperparameters-Tested:">&#182;</a></h3><p>The following hyperparameters were tested:</p>
 <p>Hidden Dimensions: 32, 64, 128, 256
@@ -18838,7 +18934,7 @@ Learning Rates: 0.001, 0.005, 0.01</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -18856,7 +18952,7 @@ Learning Rates: 0.001, 0.005, 0.01</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Summary statistics for validation accuracies</span>
@@ -18874,9 +18970,14 @@ Learning Rates: 0.001, 0.005, 0.01</p>
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
 
 
 
@@ -18903,7 +19004,8 @@ Name: val_accuracy, dtype: float64</pre>
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Training-and-Validation-Loss:">Training and Validation Loss:<a class="anchor-link" href="#Training-and-Validation-Loss:">&#182;</a></h3><p>The relationship between training and validation loss is visualized to understand overfitting and generalization trends. The observation that training loss decreases while validation loss increases as epochs progress suggests a classic sign of overfitting.</p>
 
 </div>
@@ -18914,7 +19016,7 @@ Name: val_accuracy, dtype: float64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Group by epoch and calculate mean loss</span>
@@ -18942,9 +19044,14 @@ Name: val_accuracy, dtype: float64</pre>
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 
 
@@ -18967,7 +19074,8 @@ class="
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Validation-Accuracy-and-Hyperparameters">Validation Accuracy and Hyperparameters<a class="anchor-link" href="#Validation-Accuracy-and-Hyperparameters">&#182;</a></h3>
 </div>
 </div>
@@ -18977,14 +19085,10 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-
-<span class="c1"># Hyperparameters to plot</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Hyperparameters to plot</span>
 <span class="n">hyperparameters</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hidden_dim&#39;</span><span class="p">,</span> <span class="s1">&#39;num_layers&#39;</span><span class="p">,</span> <span class="s1">&#39;dropout_rate&#39;</span><span class="p">,</span> <span class="s1">&#39;learning_rate&#39;</span><span class="p">]</span>
 
 <span class="c1"># Define plot layout</span>
@@ -18994,7 +19098,7 @@ class="
 <span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
 
 <span class="c1"># Color Scale</span>
-<span class="n">vmin</span> <span class="o">=</span> <span class="mf">0.65</span> 
+<span class="n">vmin</span> <span class="o">=</span> <span class="mf">0.65</span>
 <span class="n">vmax</span> <span class="o">=</span> <span class="mf">0.83</span>
 
 <span class="c1"># Iterate over hyperparameters</span>
@@ -19050,9 +19154,14 @@ class="
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 
 
@@ -19075,7 +19184,8 @@ class="
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Best-Performing-Model:">Best Performing Model:<a class="anchor-link" href="#Best-Performing-Model:">&#182;</a></h3><p>The best-performing model achieved a validation accuracy of 81.88% with the following hyperparameters:</p>
 
 </div>
@@ -19086,7 +19196,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Identify the best-performing model</span>
@@ -19105,9 +19215,14 @@ class="
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Best Model Hyperparameters:
@@ -19130,7 +19245,8 @@ Best Validation Accuracy: 81.88%
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="4.3-Final-Model-Predictions">4.3 Final Model Predictions<a class="anchor-link" href="#4.3-Final-Model-Predictions">&#182;</a></h2>
 </div>
 </div>
@@ -19140,7 +19256,7 @@ Best Validation Accuracy: 81.88%
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">best_model_row</span> <span class="o">=</span> <span class="n">df_epoch_results</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_epoch_results</span><span class="p">[</span><span class="s2">&quot;val_accuracy&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()]</span>
@@ -19151,7 +19267,7 @@ Best Validation Accuracy: 81.88%
 
 <span class="n">filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;lstm_h</span><span class="si">{</span><span class="n">best_hidden_dim</span><span class="si">}</span><span class="s2">_l</span><span class="si">{</span><span class="n">best_num_layers</span><span class="si">}</span><span class="s2">_lr</span><span class="si">{</span><span class="n">best_learning_rate</span><span class="si">}</span><span class="s2">_dr</span><span class="si">{</span><span class="n">best_dropout_rate</span><span class="si">}</span><span class="s2">_best.pth&quot;</span>
 
-<span class="n">model_directory</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span>  
+<span class="n">model_directory</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span>
 <span class="n">model_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">model_directory</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">model_path</span><span class="p">):</span>
@@ -19162,7 +19278,7 @@ Best Validation Accuracy: 81.88%
         <span class="n">input_dim</span><span class="o">=</span><span class="n">input_dim</span><span class="p">,</span>  <span class="c1"># Input dimension from earlier</span>
         <span class="n">output_dim</span><span class="o">=</span><span class="n">output_dim</span>  <span class="c1"># Output dimension from earlier</span>
     <span class="p">)</span>
-    
+
     <span class="n">best_model</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">model_path</span><span class="p">))</span>
     <span class="n">best_model</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
 
@@ -19178,9 +19294,14 @@ Best Validation Accuracy: 81.88%
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
+
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Model lstm_h128_l1_lr0.001_dr0.7_best.pth loaded successfully.
@@ -19197,26 +19318,40 @@ Best Validation Accuracy: 81.88%
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s2">&quot;cuda&quot;</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s2">&quot;cpu&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">original_test_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;test.csv&#39;</span><span class="p">)</span>
+<span class="n">original_test_ids</span> <span class="o">=</span> <span class="n">original_test_df</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
 
+<span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s2">&quot;cuda&quot;</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s2">&quot;cpu&quot;</span><span class="p">)</span>
+
+<span class="c1"># Set the model to evaluation mode</span>
 <span class="n">best_model</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
 
+<span class="c1"># List to store predictions</span>
 <span class="n">predictions</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>  
+<span class="c1"># Predict the outputs using the model</span>
+<span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
     <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">test_loader</span><span class="p">):</span>
-        <span class="n">inputs</span> <span class="o">=</span> <span class="n">inputs</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>  
-        <span class="n">outputs</span> <span class="o">=</span> <span class="n">best_model</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span> 
-        <span class="n">predicted_labels</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  
+        <span class="n">inputs</span> <span class="o">=</span> <span class="n">inputs</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+        <span class="n">outputs</span> <span class="o">=</span> <span class="n">best_model</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+        <span class="n">predicted_labels</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1"># Append predictions with their row index to maintain the order</span>
         <span class="k">for</span> <span class="n">batch_idx</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">predicted_labels</span><span class="p">)),</span> <span class="n">predicted_labels</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()):</span>
-            <span class="n">row_index</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">*</span> <span class="n">test_loader</span><span class="o">.</span><span class="n">batch_size</span> <span class="o">+</span> <span class="n">batch_idx</span>  
+            <span class="n">row_index</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">*</span> <span class="n">test_loader</span><span class="o">.</span><span class="n">batch_size</span> <span class="o">+</span> <span class="n">batch_idx</span>
             <span class="n">predictions</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">row_index</span><span class="p">,</span> <span class="n">label</span><span class="p">))</span>
 
-<span class="n">predictions_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="p">])</span>
+<span class="c1"># Create a DataFrame for the predictions</span>
+<span class="n">predictions_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;row_index&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="p">])</span>
 
+<span class="c1"># Now, map the predictions back to the original ids</span>
+<span class="n">predictions_df</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">original_test_ids</span><span class="p">[</span><span class="n">predictions_df</span><span class="p">[</span><span class="s2">&quot;row_index&quot;</span><span class="p">]]</span>
+<span class="n">predictions_df</span> <span class="o">=</span> <span class="n">predictions_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;row_index&quot;</span><span class="p">])</span>
+
+<span class="c1"># Save the predictions to a CSV</span>
 <span class="n">predictions_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;test_predictions.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
@@ -19230,7 +19365,8 @@ Best Validation Accuracy: 81.88%
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="5-Conclusion">5 Conclusion<a class="anchor-link" href="#5-Conclusion">&#182;</a></h1><p>The analysis and experimentation conducted throughout this project revealed several important insights into the behavior of the LSTM model and the impact of hyperparameter choices on model performance.</p>
 <p>Key Findings:</p>
 <p>Hyperparameter Sensitivity: The performance of the LSTM model was significantly influenced by hyperparameters such as the learning rate, dropout rate, and the number of layers. For instance, moderate dropout rates helped prevent overfitting, improving the model’s ability to generalize on unseen data. However, excessively high dropout rates or overly complex architectures resulted in diminishing returns, as the model failed to capture useful patterns or overfit to noise.</p>
@@ -19251,47 +19387,12 @@ Best Validation Accuracy: 81.88%
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--no-input<span class="w"> </span>--output<span class="w"> </span>NPL_Disaster_Tweets_Report.html<span class="w"> </span>NPL_Disaster_Tweets_Report.ipynb
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[NbConvertApp] Converting notebook NPL_Disaster_Tweets_Report.ipynb to html
-[NbConvertApp] Writing 1544044 bytes to NPL_Disaster_Tweets_Report.html
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span> 
